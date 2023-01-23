@@ -4,14 +4,16 @@ body {
 
 .container {
     background-color: #283618;
-    width: 30%;
+    width: 50%;
     padding: 50px 40px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
-    box-shadow: 20px 40px 40px rgba();
+    box-shadow: 5px 7px 19px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 7px 19px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 7px 19px -6px rgba(0,0,0,0.75);
 }
 
 span {
@@ -22,17 +24,18 @@ span {
 }
 
 p {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 1.1429rem + 1.1429vw, 2rem);
     color: #fff;
     text-align: center;
     word-wrap: break-word;
     line-height: 40px;
     opacity: 0;
+    padding: 0 40px;
 }
 
 .fade {
     opacity: 1;
-    transition: opacity 2.5s;
+    transition: 2.5s;
 }
 
 button {
@@ -53,4 +56,17 @@ button {
 button:hover {
     background-color: #bc6c25;
     color: #000;
+}
+
+/* media query */
+@media screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+        padding: 50px 0;
+    }
+
+    p {
+        padding: 0 25px;
+    }
+
 }
